@@ -5,7 +5,6 @@ export default Ember.Component.extend({
   totalCost: Ember.computed('shoppingCart.items', function() {
     var total= 0;
     for (var i= 0; i < this.get('shoppingCart.items.length'); i++) {
-      // debugger;
       total += this.get('shoppingCart.items')[i].get('cost');
     }
     return total;

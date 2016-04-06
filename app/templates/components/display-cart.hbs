@@ -1,7 +1,7 @@
 <ul>
 {{#each shoppingCart.items as |item|}}
-  <li>{{item.title}}  -- ${{item.cost}}</li>
+  <li>{{item.producer}}: {{item.varietal}}  -- ${{item.cost}}</li>
 {{/each}}
 </ul>
 
-{{totalCost}}
+<h4>Total Cost: ${{totalCost}}.00</h4>

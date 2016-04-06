@@ -1,6 +1,12 @@
-{{product.title}}
-<img src="{{product.image}}" alt="{{product.title}}" />
-{{product.description}}
-${{product.cost}}.00
 
-<button {{action 'addToCart' product}}>Add to Cart</button>
+<div class="container">
+  <h3>{{product.producer}}</h3>
+  <p>{{product.varietal}}</p>
+  <img src="{{product.image}}" alt="{{product.title}}" />
+  <p>{{product.description}}</p>
+  <h5>${{product.cost}}.00</h5>
+
+  <button {{action 'addToCart' product}}>Add to Cart</button>
+</div>
+<hr>
+<br>
