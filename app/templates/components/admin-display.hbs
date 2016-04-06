@@ -1,0 +1,15 @@
+<!-- {{add-product addProduct="addProduct"}} -->
+
+{{#each products as |product|}}
+<div class="container">
+  <h3>{{product.producer}}</h3>
+  <p>{{product.varietal}}</p>
+  <img src="{{product.image}}" alt="{{product.title}}" />
+  <p>{{product.description}}</p>
+  <h5>${{product.cost}}.00</h5>
+
+  <!-- <button {{action 'delete' product}}>Add to Cart</button> -->
+</div>
+<hr>
+<br>
+{{/each}}
