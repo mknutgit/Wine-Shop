@@ -1,15 +1,53 @@
-<!-- {{add-product addProduct="addProduct"}} -->
-
 {{#each products as |product|}}
-<div class="container">
-  <h3>{{product.producer}}</h3>
-  <p>{{product.varietal}}</p>
-  <img src="{{product.image}}" alt="{{product.title}}" />
-  <p>{{product.description}}</p>
-  <h5>${{product.cost}}.00</h5>
+  <div class="container">
+    <h3>{{product.producer}}</h3>
+    <p>{{product.varietal}}</p>
+    <img src="{{product.image}}" alt="{{product.title}}" />
+    <p>{{product.description}}</p>
+    <h5>${{product.cost}}.00</h5>
 
-  <!-- <button {{action 'delete' product}}>Add to Cart</button> -->
-</div>
-<hr>
-<br>
+    {{#if updateProductForm}}
+      <div>
+        <form>
+          <div class="form-group">
+            <label for="producer">Producer</label>
+            {{input value=producer id="producer" placeholder=product.producer}}
+          </div>
+
+          <div class="form-group">
+            <select {{action 'chooseVarietal' on='change'}}>
+              <option value="null">Select a varietal type</option>
+              <option value="Cabernet">Cabernet</option>
+              <option value="Merlot">Merlot</option>
+              <option value="Pinot Noir">Pinot Noir</option>
+              <option value="Pinot Gris">Pinot Gris</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="image">Image URL</label>
+            {{input value=image id="image" placeholder=product.producer}}
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description of Product</label>
+            {{textarea value=description id="description" rows="5" placeholder=product.description}}
+          </div>
+
+          <div class="form-group">
+            <label for="cost">Cost of Product</label>
+            {{input type="number" value=cost id="cost" placeholder=product.cost}}
+          </div>
+          <button {{action 'updateProduct' product}}>Save Product</button>
+        </form>
+      </div>
+      {{else}}
+          <button {{action 'updateProductForm'}}>Edit Product</button>
+      {{/if}}
+
+
+    <button {{action 'delete' product}}>Delete Product</button>
+  </div>
+  <hr>
+  <br>
 {{/each}}
