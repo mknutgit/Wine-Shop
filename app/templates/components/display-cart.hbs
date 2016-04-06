@@ -1,6 +1,7 @@
 <ul>
 {{#each shoppingCart.items as |item|}}
-  <li>{{item.producer}}: {{item.varietal}}  -- ${{item.cost}}</li>
+  <li>{{item.producer}}: {{item.varietal}}  -- ${{item.cost}} <img src="{{item.image}}" alt="{{product.title}}" />
+  <button>remove</button></li>
 {{/each}}
 </ul>
 
