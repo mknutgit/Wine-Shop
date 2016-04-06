@@ -8,8 +8,13 @@
         </div>
 
         <div class="form-group">
-          <label for="varietal">Varietal</label>
-          {{input value=varietal id="varietal"}}
+          <select {{action 'chooseVarietal' on='change'}}>
+            <option value="null">Select a varietal type</option>
+            <option value="Cabernet">Cabernet</option>
+            <option value="Merlot">Merlot</option>
+            <option value="Pinot Noir">Pinot Noir</option>
+            <option value="Pinot Gris">Pinot Gris</option>
+          </select>
         </div>
 
         <div class="form-group">
