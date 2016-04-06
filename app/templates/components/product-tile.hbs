@@ -1,6 +1,6 @@
 {{product.title}}
-{{product.image}}
+<img src="{{product.image}}" alt="{{product.title}}" />
 {{product.description}}
-{{product.cost}}
+${{product.cost}}.00
 
 <button {{action 'addToCart' product}}>Add to Cart</button>

@@ -1,0 +1,17 @@
+{ "products": [{
+    "title": "Merlot",
+    "image": "http://img1.sunset.timeinc.net/sites/default/files/image/2010/01/merlot-wine-pour-0110-m.jpg",
+    "description":"Full bodied wine",
+    "cost": 25
+  }, {
+    "title": "Shiraz",
+    "image": "http://s7e5a.scene7.com/is/image/waitrose/CellarProductDetailMainImage/430118_a_waitrose-australian-shiraz",
+    "description":"It's wine! It's wine! It's wine! It's wine! It's wine! It's wine! It's wine!",
+    "cost": 30
+  }, {
+    "title": "Cabernet",
+    "image": "http://www.mcwilliamswine.com/images/WineBeautyShot-CabernetSauvignon.jpg",
+    "description":"It's wine! It's wine! It's wine! It's wine! It's wine! It's wine! It's wine!",
+    "cost": 15
+  }]
+}
