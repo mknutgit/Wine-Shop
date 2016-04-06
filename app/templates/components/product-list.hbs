@@ -1,0 +1,10 @@
+{{#each products as |product|}}
+  {{product-tile product=product}}
+{{/each}}
+
+<select {{action 'selectVarietal' on='change'}}>
+  <option value="all">All</option>
+  <option value="Merlot">Merlot</option>
+  <option value="Pinot Noir">Pinot Noir</option>
+  <option value="Pinot Gris">Pinot Gris</option>
+</select>
