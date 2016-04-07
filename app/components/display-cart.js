@@ -8,5 +8,10 @@ export default Ember.Component.extend({
       total += this.get('shoppingCart.items')[i].get('cost');
     }
     return total;
-  })
+  }),
+  actions: {
+    removeFromCart(item) {
+      this.get('shoppingCart').remove(item);
+    }
+  }
 });

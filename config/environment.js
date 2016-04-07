@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'online-marketplace',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://wine-shop.firebaseio.com/',
+    firebase: 'https://vinoandvinyl.firebaseio.com//',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
